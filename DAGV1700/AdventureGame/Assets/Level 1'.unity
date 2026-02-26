@@ -5744,7 +5744,7 @@ GameObject:
   - component: {fileID: 278388101}
   - component: {fileID: 278388100}
   - component: {fileID: 278388099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wooden Chest 1 - frame  00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5766,9 +5766,45 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
-  nameIdObj: {fileID: 0}
+  nameIdObj: {fileID: 11400000, guid: 5f8bf9e80e2a045b3a14f3e428b48413, type: 2}
   holdTime: 0.1
-  triggerEnterMatches: []
+  triggerEnterMatches:
+  - nameIdObj: {fileID: 11400000, guid: 5f8bf9e80e2a045b3a14f3e428b48413, type: 2}
+    canRepeat: 0
+    repeatTime: 0
+    workEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 278388102}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 19b95dff4b99d8e4488b07fa6379296c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 689974266}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    repeatEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    delayedEvent:
+      m_PersistentCalls:
+        m_Calls: []
   triggerExitMatches: []
 --- !u!54 &278388100
 Rigidbody:
@@ -5793,7 +5829,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6252,7 +6288,10 @@ GameObject:
   m_Component:
   - component: {fileID: 689974268}
   - component: {fileID: 689974267}
-  m_Layer: 0
+  - component: {fileID: 689974270}
+  - component: {fileID: 689974269}
+  - component: {fileID: 689974271}
+  m_Layer: 6
   m_Name: 'Key 1 - GOLD - '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6332,6 +6371,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689974269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689974266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4b7201579804bafb708db2ec7bfa66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttachOnTrigger
+--- !u!114 &689974270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689974266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c956dfee3a37a45dd99f9f346b9ff541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MatchIdBehaviour
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nameIdObj: {fileID: 11400000, guid: 5f8bf9e80e2a045b3a14f3e428b48413, type: 2}
+  holdTime: 0.1
+  triggerEnterMatches:
+  - nameIdObj: {fileID: 11400000, guid: 5f8bf9e80e2a045b3a14f3e428b48413, type: 2}
+    canRepeat: 0
+    repeatTime: 0
+    workEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    repeatEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    delayedEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  triggerExitMatches: []
+--- !u!65 &689974271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689974266}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4, y: 1.12, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1023468068
 PrefabInstance:
   m_ObjectHideFlags: 0
